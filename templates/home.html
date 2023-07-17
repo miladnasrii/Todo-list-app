@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}صفحه اصلی{% endblock title %}
+
+{% block content %}
+<div class='container'>
+    {% for todo in todos %}
+        
+            <div class='todo_item'>
+                <a id='todo' href='{% url 'detail' todo.id %}'>{{ todo.title }}</a><br>
+            </div>
+       
+    {% endfor %}
+    <a href='{% url 'create' %}' class='btn btn-success'>ایجاد آیتم جدید</a>
+</div>
+{% endblock content %}

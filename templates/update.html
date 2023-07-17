@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}صفحه ویرایش{% endblock title %}
+
+{% block content %}
+    <div class='container'>
+        <form action='' method='post' novalidate>
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input class='btn btn-success' type='submit' value='ثبت تغییرات'/>
+            <a class="btn btn-info" href='{% url 'home' %}'>صفحه اصلی</a>
+        </form>
+    </div>
+{% endblock content %}

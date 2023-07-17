@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Create todo{% endblock title %}
+
+{% block content %}
+    <div class='container'>
+        <form action='' method='post' novalidate>
+            {% csrf_token %}
+            {{ form.as_p }}
+{#            <input type="text"/>#}
+{#            <input type="text"/>#}
+{#            <input type="date"/>#}
+            <input class='btn btn-success' type='submit' value='ایجاد'/>
+            <a class="btn btn-info" href='{% url 'home' %}'>صفحه اصلی</a>
+        </form>
+    </div>
+{% endblock content %}
